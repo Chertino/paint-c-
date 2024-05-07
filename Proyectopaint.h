@@ -24,6 +24,7 @@ public:
 
 public slots:
     void clearImage();
+    void cambiarBorrador();
 
 
 protected:

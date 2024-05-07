@@ -39,6 +39,12 @@ bool ProyectoPaint::guardarImagen(const QString &fileName,const char *fileFormat
 
 }
 
+void ProyectoPaint::cambiarBorrador()
+{
+    myPenWidth = 10;
+    myPenColor = Qt::white;
+}
+
 void ProyectoPaint::cambiarColor(const QColor &newColor){
     myPenColor = newColor;
 

@@ -81,6 +81,11 @@ void MainWindow::crearAcciones(){
     connect(Accioncolor, SIGNAL(triggered()), this, SLOT(color()));
     Accioncolor->setShortcut(tr("Ctrl+c"));
 
+    Accionborrador = new QAction(tr("&Borrador..."), this);
+    connect(Accionborrador, &QAction::triggered, this, &MainWindow::borrador);
+    Accionborrador->setShortcut(tr("Ctrl+e"));
+
+
     Acciongrosor = new QAction(tr("&Grosor..."), this); // Conectar a MainWindow
     Acciongrosor->setShortcut(tr("Ctrl++"));
     connect(Acciongrosor, SIGNAL(triggered()), this, SLOT(grosor()));
@@ -112,6 +117,7 @@ void MainWindow::crearMenus(){
     MenuDeAjustes = new QMenu(tr("&Ajustes"), this);
     MenuDeAjustes->addAction(Accioncolor);
     MenuDeAjustes->addAction(Acciongrosor);
+    MenuDeAjustes->addAction(Accionborrador);
     MenuDeAjustes->addSeparator();
     MenuDeAjustes->addAction(AccionlimpiarVentana);
 
@@ -119,12 +125,22 @@ void MainWindow::crearMenus(){
     MenuDeInformacion->addAction(AccionInformacion);
     MenuDeInformacion->addAction(AccionQtInformacion);
 
+    MenuDeGraficos = new QMenu(tr("Graficos"), this);
+
+
+
     menuBar()->addMenu(MenuDeArchivo);
     menuBar()->addMenu(MenuDeAjustes);
     menuBar()->addMenu(MenuDeInformacion);
+    menuBar()->addMenu(MenuDeGraficos);
 
 
 
+}
+
+void MainWindow::borrador()
+{
+    Proyectopaint->cambiarBorrador();
 }
 
 //Cerrar la aplicacion sin guardar

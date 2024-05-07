@@ -20,6 +20,7 @@ private slots:
     void abrir();
     void guardar();
     void color();
+    void borrador();
     void grosor();
     void informacion();
 private:
@@ -34,16 +35,19 @@ private:
     QMenu *MenuDeArchivo;
     QMenu *MenuDeAjustes;
     QMenu *MenuDeInformacion;
+    QMenu *MenuDeGraficos;
     //Creacion de acciones dentro de la aplicacion
 
     QAction *AccionAbrir;
     QList<QAction *> AccionesGuardarComo;
     QAction *AccionSalir;
     QAction *Accioncolor;
+    QAction *Accionborrador;
     QAction *Acciongrosor;
     QAction *AccionlimpiarVentana;
     QAction *AccionInformacion;
     QAction *AccionQtInformacion;
+
 
 
 
