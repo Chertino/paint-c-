@@ -23,13 +23,34 @@ Dibujar y Editar: Utilice el lápiz para dibujar sobre la imagen. Puede cambiar 
 Guardar la Imagen: Guarde su obra de arte utilizando la opción Guardar como del menú Archivo. Puede elegir entre varios formatos de archivo compatibles.
 
 
-Créditos
-Este proyecto se inspiró en el tutorial de programación de Derek Banas en YouTube.
-
-
 Contribuciones
 Las contribuciones son bienvenidas. Si deseas contribuir a este proyecto, no dudes en enviar un pull request.
 
 
 Licencia
 Este proyecto está licenciado bajo Licencia MIT.
+
+
+Créditos
+Este proyecto se inspiró en el tutorial de programación de Derek Banas en YouTube.
+
+//Acerca de los archivos.
+
+Los primeros 3 archivos, son los recursos que crea el la plataforma de qt para incializar una correcta ejecucion.
+
+//Headers
+
+Proyectopaint.h se encargará de crear todos los eventos y funciones que ocurran dentro del area de trabajo, por asi decirlo es la parte donde se crean y se definen todas las funciones.
+Mainwindow.h crea las funciones de la venta principal, lo que corresponde a modificaciones, guardar archivo, menus, etc.
+
+//Archivos .cpp
+
+main.cpp tiene como objetivo mostrar la venta en pantalla, lo que decir que es la parte funcional, que se encargara de inicalizar correctamente la ventana.
+
+mainwindow.cpp Se ve a encargar de crar la parte funcional a nuestras las funciones y acciones que previamente habiamos registrado anteriormente en mainwindow.h y ademas, las incluye en los menus de ventana.
+
+Proyectopaint.cpp tiene como objetivo programar toda el area de trabajo con sus respectivos parametros, si el usuario realiza una modificacion ya sea de color o grosor de lapiz, este recibirá esta informacion  y la implementará en el area de trabajo cuando la utilicemos.
+
+//Archivo.ui
+
+Qt Creator nos ofrece la posibilidad de realizar cambios a nustras ventanas a partir de una herramienta de diseño, personalmente no la hemos implementado aun, así que el archivo no contiene informacion importante.
