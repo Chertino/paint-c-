@@ -28,7 +28,7 @@ Puede elegir entre varios formatos de archivo compatibles.
 
 ![image](https://github.com/Chertino/paint-c-/assets/137564638/7c8648c0-fb5b-4e78-b6c7-3a977c1b5a2e)
 
-Y simplemete haz click en guardar
+En la ventana emergente, puedes elegir la ubicacion de tu archivo y simplemete haz click en guardar.
 ![image](https://github.com/Chertino/paint-c-/assets/137564638/fbf0ea58-c30c-4720-8ab8-2a6c4386742d)
 
 Contribuciones
