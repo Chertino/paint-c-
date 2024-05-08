@@ -20,8 +20,16 @@ Instrucciones de Uso
 Abrir la Aplicación: Ejecutar el archivo ejecutable o compilar y ejecutar el código fuente utilizando un compilador compatible con Qt.
 Crear o Abrir una Imagen: Utilice las opciones del menú Archivo para crear una nueva imagen o abrir una existente.
 Dibujar y Editar: Utilice el lápiz para dibujar sobre la imagen. Puede cambiar el color y grosor del lápiz según sus preferencias.
-Guardar la Imagen: Guarde su obra de arte utilizando la opción Guardar como del menú Archivo. Puede elegir entre varios formatos de archivo compatibles.
+Guardar la Imagen: Guarde su obra de arte utilizando la opción Guardar como del menú Archivo.
+![image](https://github.com/Chertino/paint-c-/assets/137564638/8589a3ed-8a70-4f99-9883-38ff01e971b4)
 
+
+Puede elegir entre varios formatos de archivo compatibles.
+
+![image](https://github.com/Chertino/paint-c-/assets/137564638/7c8648c0-fb5b-4e78-b6c7-3a977c1b5a2e)
+
+Y simplemete haz click en guardar
+![image](https://github.com/Chertino/paint-c-/assets/137564638/fbf0ea58-c30c-4720-8ab8-2a6c4386742d)
 
 Contribuciones
 Las contribuciones son bienvenidas. Si deseas contribuir a este proyecto, no dudes en enviar un pull request.
