@@ -5,27 +5,27 @@
 #include <QColor>
 #include <QImage>
 #include <QWidget>
+
 class ProyectoPaint : public QWidget
 {
-   Q_OBJECT
+    Q_OBJECT
 
 public:
-   ProyectoPaint(QWidget *parent = 0);
+    enum Shape { None, Rectangle, Circle, Triangle, Line };
+
+    ProyectoPaint(QWidget *parent = 0);
     bool abrirImagen(const QString &fileName);
     bool guardarImagen(const QString &fileName, const char *fileFormat);
     void cambiarColor(const QColor &newColor);
     void cambiarGrosor(int newWidth);
-
-    // Funcion para saber que hacer con el archivo si el usuario cierra el programa
-    bool modificaciones() const {return modificado;}
-    QColor color() const {return myPenColor;}
-    int grosor() const {return myPenWidth;}
-
+    bool modificaciones() const { return modificado; }
+    QColor color() const { return myPenColor; }
+    int grosor() const { return myPenWidth; }
+    void setShape(Shape shape);
 
 public slots:
     void clearImage();
     void cambiarBorrador();
-
 
 protected:
     void mousePressEvent(QMouseEvent *event) override;
@@ -37,17 +37,16 @@ protected:
 private:
     void Trazarlinea(const QPoint &endPoint);
     void cambiarTamanoimagen(QImage *image, const QSize &newSize);
-    //Hay cambios en el programa
-    bool modificado;
+    void drawShape(QPainter &painter, const QPoint &startPoint, const QPoint &endPoint);
 
-    //El usuario está dibujando
+    bool modificado;
     bool dibujando;
     int myPenWidth;
     QColor myPenColor;
     QImage image;
     QPoint lastPoint;
-
+    Shape currentShape;
+    QPoint shapeStartPoint;
 };
-
 
 #endif // PROYECTOPAINT_H

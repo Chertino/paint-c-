@@ -10,34 +10,42 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 protected:
-    //Creacion de evento para cerrar la aplicacion
+    // Creación de evento para cerrar la aplicación
     void closeEvent(QCloseEvent *Event) override;
 
 public:
-  MainWindow();
+    MainWindow();
+
 private slots:
-    //Slots de funciones puntuales
+    // Slots de funciones puntuales
     void abrir();
     void guardar();
     void color();
     void borrador();
     void grosor();
+    void lapiz();
     void informacion();
+    void drawRectangle();
+    void drawCircle();
+    void drawTriangle();
+    void drawLine();
+
 private:
-    //Funciones adicionales
+    // Funciones adicionales
     void crearAcciones();
     void crearMenus();
     bool guardadoextra();
     bool guardarArchivo(const QByteArray &fileFormat);
     ProyectoPaint *Proyectopaint;
-    //Creacion de menus dependiendo de su utilidad
+
+    // Creación de menús dependiendo de su utilidad
     QMenu *MenuGuardarComo;
     QMenu *MenuDeArchivo;
     QMenu *MenuDeAjustes;
     QMenu *MenuDeInformacion;
     QMenu *MenuDeGraficos;
-    //Creacion de acciones dentro de la aplicacion
 
+    // Creación de acciones dentro de la aplicación
     QAction *AccionAbrir;
     QList<QAction *> AccionesGuardarComo;
     QAction *AccionSalir;
@@ -47,14 +55,12 @@ private:
     QAction *AccionlimpiarVentana;
     QAction *AccionInformacion;
     QAction *AccionQtInformacion;
+    QAction *AccionLapiz;
 
-
-
-
-
-
-
-
-
+    QAction *AccionDrawRectangle;
+    QAction *AccionDrawCircle;
+    QAction *AccionDrawTriangle;
+    QAction *AccionDrawLine;
 };
+
 #endif // MAINWINDOW_H
